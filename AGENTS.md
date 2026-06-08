@@ -1,44 +1,57 @@
-﻿# 妯北涔℃潙鎸叴椤圭洰 鈥?Codex 鏅鸿兘浣撻厤缃?
-> Codex AI Agent 閰嶇疆 鈥?鏈枃浠跺畾涔変簡 Codex 鍦ㄨ椤圭洰涓殑琛屼负妯″紡鍜岃兘鍔涜竟鐣?
-## 椤圭洰韬唤
+﻿# 上海松江区横山乡村振兴改造项目 — Codex 智能体配置
 
-- **椤圭洰鍚嶇О:** 涓婃捣鏉炬睙鍖烘í灞变埂鏉戞尟鍏存敼閫犻」鐩?- **椤圭洰绫诲瀷:** 椤跺眰绛栧垝 / 鍖轰綅鐮旂┒ / 瀵规爣鍒嗘瀽 / 鎷涘晢涓庤繍钀ユ柟妗?- **宸ヤ綔鐩綍:** `C:\Users\Lenovo\Documents\shanghai-hengshan-rural-revitalization`
-- **榛樿妯″瀷:** deepseek-v4-flash
+> Codex AI Agent 配置 — 本文件定义了 Codex 在该项目中的行为模式和能力边界
 
-## 鍙敤鑳藉姏
+## 项目身份
 
-### 鏍稿績鑳藉姏
-| 鑳藉姏 | 瀹炵幇鏂瑰紡 | 鐘舵€?|
+- **项目名称:** 上海松江区横山乡村振兴改造项目
+- **项目类型:** 顶层策划 / 区位研究 / 对标分析 / 招商与运营方案
+- **工作目录:** `C:\Users\Lenovo\Documents\shanghai-hengshan-rural-revitalization`
+- **默认模型:** deepseek-v4-flash
+
+## 可用能力
+
+### 核心能力
+
+| 能力 | 实现方式 | 状态 |
 |---|---|---|
-| 鏂囨。鐢熸垚 (Word) | python-docx | 鉁?|
-| 琛ㄦ牸澶勭悊 (Excel) | openpyxl + pandas | 鉁?|
-| 婕旂ず鏂囩 (PPT) | pptxgenjs | 鉁?|
-| 缃戦〉娴忚/鎴浘 | Playwright Chromium | 鉁?|
-| 妗岄潰杩滅▼鎺у埗 | Computer Use (named pipe) | 鉁?|
-| AI 缂栫爜鏅鸿兘浣?| CodeWhale | 鉁?|
-| 缃戠粶浠ｇ悊 | 127.0.0.1:51008 | 鉁?|
+| 文档生成 (Word) | python-docx | ✅ |
+| 表格处理 (Excel) | openpyxl + pandas | ✅ |
+| 演示文稿 (PPT) | pptxgenjs | ✅ |
+| 网页浏览/截图 | Playwright Chromium | ✅ |
+| 桌面远程控制 | Computer Use (named pipe) | ✅ |
+| AI 编码智能体 | CodeWhale | ✅ |
+| 网络代理 | 127.0.0.1:51008 | ✅ |
 
-### 宸插畨瑁呭伐鍏风储寮?| 宸ュ叿 | 瀹夎浣嶇疆 | 鐢ㄩ€?|
+### 已安装工具索引
+
+| 工具 | 安装位置 | 用途 |
 |---|---|---|
-| CodeWhale | npm global | DeepSeek 缂栫爜鏅鸿兘浣撶粓绔?|
-| Playwright | bundled runtime | 娴忚鍣ㄨ嚜鍔ㄥ寲銆佹埅鍥?|
-| python-docx | bundled Python | Word 鏂囨。璇诲啓 |
-| openpyxl | bundled Python | Excel 琛ㄦ牸澶勭悊 |
-| pptxgenjs | bundled Node.js | PPT 婕旂ず鏂囩鐢熸垚 |
-| codex-proxy-switcher-win | ~/.codex/skills/ | 浠ｇ悊鍚姩鍣?(GUI) |
+| CodeWhale | npm global | DeepSeek 编码智能体终端 |
+| Playwright | bundled runtime | 浏览器自动化、截图 |
+| python-docx | bundled Python | Word 文档读写 |
+| openpyxl | bundled Python | Excel 表格处理 |
+| pptxgenjs | bundled Node.js | PPT 演示文稿生成 |
+| codex-proxy-switcher-win | ~/.codex/skills/ | 代理启动器 (GUI) |
 
-## 宸ヤ綔娴佽鍒?1. **瑙勫垝鍏堣:** 澶嶆潅浠诲姟鍏堣緭鍑虹粨鏋勫寲璁″垝锛岀‘璁ゅ悗鍐嶆墽琛?2. **璇佹嵁浼樺厛:** 宸ュ叿杈撳嚭浼樹簬鐚滄祴锛岄獙璇佹槸浠诲姟鐨勪竴閮ㄥ垎
-3. **鐢ㄦ埛鎰忓浘浼樺厛:** 褰撳墠璇锋眰浼樺厛浜庡巻鍙茶蹇嗗拰鏃㈡湁閰嶇疆
-4. **杈撳嚭鏍￠獙:** 鐢熸垚鏂囦欢鍚庤嚜鍔ㄩ獙璇佸唴瀹瑰畬鏁存€?5. **閿欒澶勭悊:** DeepSeek 闄愭祦/瓒呮椂鏃惰嚜鍔ㄩ檷绾ч噸璇?
-## 瀹夊叏杈圭晫
-- 鎵€鏈夎緭鍑烘枃浠朵繚瀛樺埌椤圭洰 output/ 鐩綍
-- 涓嶄慨鏀圭郴缁熺骇閰嶇疆
-- 涓嶈闂潪鎺堟潈鐩綍
-- 浠ｇ悊閰嶇疆: 127.0.0.1:51008
+## 工作流规则
+
+1. **规划先行:** 复杂任务先输出结构化计划，确认后再执行
+2. **证据优先:** 工具输出优于猜测，验证是任务的一部分
+3. **用户意图优先:** 当前请求优先于历史记忆和既有配置
+4. **输出校验:** 生成文件后自动验证内容完整性
+5. **错误处理:** DeepSeek 限流/超时时自动降级重试
+
+## 安全边界
+
+- 所有输出文件保存到项目 `output/` 目录
+- 不修改系统级配置
+- 不访问非授权目录
+- 代理配置: 127.0.0.1:51008
 
 ---
 
-*鐢?Codex 鑷姩鐢熸垚 鈥?2026-06-09*
+*由 Codex 自动生成 — 2026-06-09*
 
 ---
 
@@ -50,9 +63,9 @@ Default document output language is Simplified Chinese for plans, specs, reviews
 
 When creating a new durable document-style file without an explicit user-provided path, prefer the repository's documentation directory. Use `docs/` by default, unless the repository already clearly uses another documentation directory such as `doc/`, `spec/`, or `specs/`.
 
-When creating a new document-style file without an explicit user-provided name, prefer a concise Simplified Chinese filename that matches the document's actual purpose, such as `瀹炴柦璁″垝.md`, `浠ｇ爜璇勫.md`, `闂鎺掓煡.md`, `鎺ュ彛璁捐.md`, `鏁版嵁缁撴瀯璁捐.md`, `琛ㄧ粨鏋勮璁?md`, `Redis璁捐.md`, `S3璁捐.md`, or `瀛楁璇存槑.md`, unless the repository already uses an English naming convention.
+When creating a new document-style file without an explicit user-provided name, prefer a concise Simplified Chinese filename that matches the document's actual purpose, such as `实施计划.md`, `代码评审.md`, `问题排查.md`, `接口设计.md`, `数据结构设计.md`, `表结构设计.md`, `Redis设计.md`, `S3设计.md`, or `字段说明.md`, unless the repository already uses an English naming convention.
 
-If the document is specifically about Redis or S3, prefer literal names like `Redis璁捐.md` and `S3璁捐.md` over broader names such as cache design or object storage design.
+If the document is specifically about Redis or S3, prefer literal names like `Redis设计.md` and `S3设计.md` over broader names such as cache design or object storage design.
 
 Write document content in Simplified Chinese and keep it direct, concrete, and easy for Chinese-speaking teammates to read. Prefer plain language over heavy jargon. If a technical term is necessary, keep it accurate and add a brief explanation when that helps readability.
 
@@ -70,3 +83,8 @@ If design or planning documents are produced, explicitly capture the relevant da
 
 Respect explicit user language overrides and repository-local documentation conventions.
 
+### 视觉能力
+
+| 能力 | 实现方式 | 状态 |
+|---|---|---|
+| 截屏识图 / OCR / 视频帧分析 | vision-bridge (自定义 skill) | 等待 API Key 配置 |
