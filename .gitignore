@@ -2,3 +2,8 @@
 edge_*.txt
 .DS_Store
 *.log
+
+Thumbs.db
+desktop.ini
+~$*.pptx
+~$*.xls
