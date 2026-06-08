@@ -1,0 +1,4 @@
+﻿node_modules/
+edge_*.txt
+.DS_Store
+*.log
